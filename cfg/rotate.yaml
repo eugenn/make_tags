@@ -1,0 +1,17 @@
+transform:
+  __class_fullname__: Compose
+  additional_targets: {}
+  p: 1.0
+  transforms:
+   - __class_fullname__: Resize
+     always_apply: false
+     height: 100
+     width: 100
+     interpolation: 4 #cv2.INTER_LANCZOS4
+     p: 1
+   - __class_fullname__: SafeRotate
+     always_apply: false
+     limit: 45
+     border_mode: 0 #cv2.BORDER_CONSTANT
+     interpolation: 2 #cv2.INTER_CUBIC
+     p: 1

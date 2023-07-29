@@ -1,0 +1,15 @@
+transform:
+  __class_fullname__: Compose
+  additional_targets: {}
+  p: 1.0
+  transforms:
+   - __class_fullname__: Resize
+     always_apply: false
+     height: 100
+     width: 100
+     interpolation: 4 #cv2.INTER_LANCZOS4
+     p: 1
+   - __class_fullname__: Defocus
+     always_apply: false
+     radius: [3,5]
+     p: 1

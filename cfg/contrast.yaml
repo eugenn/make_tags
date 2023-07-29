@@ -1,0 +1,17 @@
+transform:
+  __class_fullname__: Compose
+  additional_targets: {}
+  p: 1.0
+  transforms:
+   - __class_fullname__: Resize
+     always_apply: false
+     height: 100
+     width: 100
+     interpolation: 4 #cv2.INTER_LANCZOS4
+     p: 1
+   - __class_fullname__: RandomBrightnessContrast
+     always_apply: false
+     brightness_limit: [-0.2, 0.1]
+     contrast_limit: 0.2
+     p: 1
+

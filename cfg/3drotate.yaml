@@ -1,0 +1,17 @@
+transform:
+  __class_fullname__: Compose
+  additional_targets: {}
+  p: 1.0
+  transforms:
+   - __class_fullname__: Resize
+     always_apply: false
+     height: 100
+     width: 100
+     interpolation: 4 #cv2.INTER_LANCZOS4
+     p: 1
+   - __class_fullname__: aug_transform._3DRotateTransform
+     always_apply: false
+     theta: 0
+     phi: 0
+     gamma: 45
+     p: 1
